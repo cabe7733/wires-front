@@ -1,1 +1,14 @@
-<p>create-message works!</p>
+<section class="w50 mx-auto">
+    <h2 class="text-yellow">Create messages</h2>
+    <form class="w100" [formGroup]="postMessage" (ngSubmit)="createMessage()">
+        <div class="mt-1">
+            <label>First name:</label><br>
+            <input type="text"><br>
+        </div>
+        <div class="mt-1">
+            <label>Last name:</label><br>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <button class="button-submit" [disabled]="!postMessage">Share</button>
+    </form>
+</section>

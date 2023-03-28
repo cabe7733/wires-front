@@ -1,1 +1,33 @@
-<p>header works!</p>
+<div class="topnav">
+    <a>
+        <img src="../../../../assets/img/Group 2.png" alt="">
+    </a>
+    <div class="topnav">
+        <a class="item">
+            <img src="../../../assets/icon/chatbox-ellipses-1.png" alt="">
+        </a>
+        <a class="item" (click)="toggleDropdown()">
+            <img src="../../../assets/icon/menu.png">
+            <div class="dropdown" *ngIf="dropdown">
+                <div class="dropdown-content">
+                    <ul class="mt-2">
+                        <li class="mt-1">{{userName}}</li>
+                        <li class="mt-1" routerLinkActive="" routerLink="create-messages">
+                            <img src="../../../assets/icon/create.png"> Create messages
+                        </li>
+                        <li class="mt-1" routerLinkActive="" routerLink="my-messages">
+                            <img src="../../../assets/icon/log-in-sharp.png"> My messages
+                        </li>
+                        <li class="mt-1" routerLinkActive="" routerLink="all-messages">
+                            <img src="../../../assets/icon/chatbubbles-sharp.png"> Se all messages
+                        </li>
+                        <li class="mt-1" routerLinkActive="" routerLink="">
+                            <img src="../../../assets/icon/log-in-sharp.png"> Logout
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </a>
+    </div>
+</div>

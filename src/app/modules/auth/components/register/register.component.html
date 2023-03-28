@@ -1,1 +1,36 @@
-<p>register works!</p>
+<section class="w50 mx-auto">
+    <div class="relative lg:w-1/3 md:w-1/2 w-full">
+        <img src="../../../../../assets/img/image 2.png" class="" width="508px" alt="">
+        <img src="../../../../../assets/img/Group 2.png" class="logo-wires">
+    </div>
+
+    <h2 class="">Welcome To Wires</h2>
+    <form class="bg-white" style="width: 380px;" [formGroup]="register" (ngSubmit)="onRegister()">
+        <div>
+            <h4 class="text-center text-yellow" (click)="redirectoLogin()">Sing In</h4>
+        </div>
+        <div class="mt-1">
+            <label>email:</label><br>
+            <input type="email" formControlName="email"><br>
+        </div>
+        <div class="mt-1">
+            <label>fullName:</label><br>
+            <input type="text" formControlName="fullName"><br>
+        </div>
+        <div class="mt-1">
+            <label>username:</label><br>
+            <input type="text" formControlName="username"><br>
+        </div>
+
+        <div class="mt-1">
+            <label>password:</label><br>
+            <input type="password" formControlName="password"><br>
+        </div>
+        <button class="button-submit w100" [disabled]="!register">Create</button>
+
+        <div class="text-center">
+            <p>All Rights Reserved. WIRES</p>
+            <p><span class="text-yellow">privacy policies</span> | <span class="text-yellow">terms & Conditions</span></p>
+        </div>
+    </form>
+</section>

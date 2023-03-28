@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-create-message',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateMessageComponent implements OnInit {
 
-  constructor() { }
+  postMessage: FormGroup;
+
+  constructor() {
+    this.postMessage = new FormGroup({
+      title: new FormControl(null, [Validators.required]),
+      message: new FormControl(null,[Validators.required, Validators.minLength(5)])
+   });
+  }
 
   ngOnInit(): void {
   }
 
+
+  createMessage(){
+    this.postMessage.value
+    this.postMessage.reset()
+  }
 }

@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
 
   }
   redirectoLogin(){
-    this.route.navigate(['login']);
+    this.route.navigate(['auth/login']);
   }
 
 }

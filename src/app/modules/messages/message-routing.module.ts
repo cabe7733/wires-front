@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
+import { LoginGuard } from 'src/app/core/guards/login.guard';
 import { CreateMessageComponent } from './components/create-message/create-message.component';
 import { MyMessageComponent } from './components/my-message/my-message.component';
 import { SeeAllMessageComponent } from './components/see-all-message/see-all-message.component';
@@ -7,7 +8,7 @@ import { MessageComponent } from './message.component';
 
 const routes: Routes = [
   {
-    path:'message', component: MessageComponent, children:[
+    path:'message', component: MessageComponent, canActivate:[LoginGuard], children:[
       {
         path: 'create-messages',
         component: CreateMessageComponent

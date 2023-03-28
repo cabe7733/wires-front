@@ -33,6 +33,10 @@ export class LoginComponent implements OnInit {
 
   loginSubmit(){
     console.log(this.login.value);
+    this.loginServices.login(this.login.value).subscribe(data=>{
+      sessionStorage.setItem('user', data);
+      this.route.navigate(['messages/create-messages']);
+    })
     this.login.reset();
   }
 
