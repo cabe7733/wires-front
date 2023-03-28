@@ -5,18 +5,15 @@ import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
-    path:'auth', children:[
-      {
-        path: 'login',
-        component: LoginComponent
-      },
-      {
-        path: 'register',
-        component: RegisterComponent
-      },
-      { path: '',   redirectTo: 'auth/login', pathMatch: 'full' }
-    ]
-  }
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  { path: '',   redirectTo: 'auth/login', pathMatch: 'full' }
+
 ]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
@@ -24,4 +21,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MessageRoutingModule { }
+export class AuthRoutingModule { }
