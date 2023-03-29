@@ -9,6 +9,7 @@ import { MyMessageService } from '../../services/my-message.service';
 export class MyMessageComponent implements OnInit {
 
   message:any;
+  searchMessage:any;
   constructor(private services:MyMessageService) { }
 
   ngOnInit(): void {
